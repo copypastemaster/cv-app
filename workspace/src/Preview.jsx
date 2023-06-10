@@ -6,7 +6,9 @@ class Preview extends Component {
   }
 
   render() {
-    const { name, email, number, school, course, year } = this.props
+    const { name, email, number } = this.props
+    const { school, course, year } = this.props
+    const { company, position, tasks, duration } = this.props
    
 
     return (
@@ -21,6 +23,13 @@ class Preview extends Component {
           <p>School: { school } </p>
           <p>Course: { course }</p>
           <p>Last year attended: { year }</p>
+        </section>
+
+        <section>
+          <p>Company: { company }</p>
+          <p>Position: { position }</p>
+          <p>Main tasks: { tasks }</p>
+          <p>Duration: { duration }</p>
         </section>
       </>
     )

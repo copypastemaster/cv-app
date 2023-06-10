@@ -2,6 +2,7 @@ import { Component } from 'react'
 import GeneralInfo from './components/GenInfo'
 import Education from './components/Education'
 import Preview from './Preview'
+import Experience from './components/WorkExp'
 import './styles/app.css'
 
 class App extends Component {
@@ -19,11 +20,18 @@ class App extends Component {
         schoolName: '',
         course: '',
         year: '',
+      },
+
+      work: {
+        company: '',
+        position: '',
+        tasks: '',
+        duration: '',
       }
     }
   }
 
-  // GenInfo logics
+  // GenInfo events
   handleName = (e) => {
     this.setState({
       name: e.target.value
@@ -41,6 +49,8 @@ class App extends Component {
       number: e.target.value
     })
   }
+
+  // Education events
 
   handleSchool = (e) => {
     this.setState({
@@ -60,21 +70,55 @@ class App extends Component {
     })
   }
 
+  // Work events
+
+  handleCompany = (e) => {
+    this.setState({
+      company: e.target.value
+    })
+  }
+
+  handlePosition = (e) => {
+    this.setState({
+      position: e.target.value
+    })
+  }
+
+  handleTasks = (e) => {
+    this.setState({
+      tasks: e.target.value
+    })
+  }
+
+  handleDuration = (e) => {
+    this.setState({
+      duration: e.target.value
+    })
+  }
+
   render() {
     return (
       <div id="mainContainer">
         <form id="form">
+
           <h1> General Info </h1>
-          <GeneralInfo 
-            name={this.handleName}
-            email={this.handleEmail}
-            number={this.handleNumber}
-            />
+            <GeneralInfo 
+              name={this.handleName}
+              email={this.handleEmail}
+              number={this.handleNumber}
+              />
 
           <h1> Education </h1>  
-          <Education school={this.handleSchool}
-                     course={this.handleCourse}
-                     lastYear={this.handleYear}/>
+            <Education school={this.handleSchool}
+                      course={this.handleCourse}
+                      lastYear={this.handleYear}/>
+
+          <h1> Work Experience </h1>
+            <Experience company={this.handleCompany}
+                        position={this.handlePosition}
+                        tasks={this.handleTasks}
+                        duration={this.handleDuration}/>
+
         </form>
 
         <Preview 
@@ -84,6 +128,10 @@ class App extends Component {
             school={this.state.schoolName}
             course={this.state.course}
             year={this.state.year}
+            company={this.state.company}
+            position={this.state.position}
+            tasks={this.state.tasks}
+            duration={this.state.duration}
             />
       </div>
       
