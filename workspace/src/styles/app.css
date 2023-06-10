@@ -1,0 +1,8 @@
+#mainContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#form {
+  max-width: 800px;
+}

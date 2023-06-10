@@ -1,0 +1,2 @@
+Save all the inputs on different sections (genInfo, educExp, workExp).
+
