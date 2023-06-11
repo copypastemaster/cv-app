@@ -1,0 +1,1 @@
+#section1,#section2,#section3{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}#mainContainer{display:flex;gap:900px;border:1px solid}#form{max-width:200px;display:flex;flex-flow:column;gap:10px}.preview{border:1px solid;display:flex;flex-flow:column;flex-basis:500px;justify-content:space-evenly}
