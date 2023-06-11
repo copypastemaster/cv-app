@@ -8,4 +8,4 @@
 
 - _user accounts_
 
-[Live (https://copypastemaster.github.io/cv-app/)] :point_left:
+[Live] (https://copypastemaster.github.io/cv-app/) :point_left:
