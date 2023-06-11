@@ -120,7 +120,7 @@ class App extends Component {
                         duration={this.handleDuration}/>
 
         </form>
-
+        <div className="preview">
         <Preview 
             name={this.state.name}
             email={this.state.email}
@@ -133,6 +133,8 @@ class App extends Component {
             tasks={this.state.tasks}
             duration={this.state.duration}
             />
+        </div>
+        
       </div>
       
     )

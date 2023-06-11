@@ -28,7 +28,9 @@ class GeneralInfo extends Component {
          <label>Phone number:
             <input type="number" 
                    id="number"
-                   onChange={number}/>
+                   onChange={number}
+                   minLength={5}
+                   maxLength={12}/>
          </label>
       </div>
     )
